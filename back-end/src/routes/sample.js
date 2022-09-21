@@ -1,9 +1,10 @@
 import express from 'express'
 
-import { sampleAdd } from '../controllers/sample.js'
+import { sampleAdd, sampleView } from '../controllers/sample.js'
 
 const sampleRouter = express.Router()
 
-sampleRouter.get('/add', sampleAdd)
+sampleRouter.post('/add', sampleAdd)
+sampleRouter.get('/view', sampleView)
 
 export default sampleRouter
