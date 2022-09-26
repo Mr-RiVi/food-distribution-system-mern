@@ -1,7 +1,7 @@
 import SupplyDrop from '../models/Schedule_drop.js'
 import mongoose from 'mongoose'
 
-//Add schedules
+//Add supply drop
 export const createDrop = async (data) => {
   try {
     const addDrop = new SupplyDrop({
@@ -23,12 +23,12 @@ export const createDrop = async (data) => {
   }
 }
 
-//Get schedule details
+//Get supply drop details
 export const getDrops = async (id) => {
   return await SupplyDrop.findById(mongoose.Types.ObjectId(id))
 }
 
-//Update schedules
+//Update supply drop
 export const updateDrops = async (id, ob) => {
   try {
     await SupplyDrop.findByIdAndUpdate(id, ob)
@@ -38,7 +38,7 @@ export const updateDrops = async (id, ob) => {
   }
 }
 
-//Delete schedules
+//Delete supply drop
 export const deleteDrops = async (id) => {
   try {
     await SupplyDrop.findByIdAndDelete(id)

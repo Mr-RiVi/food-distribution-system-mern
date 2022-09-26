@@ -7,7 +7,7 @@ import {
   deleteDropsByID,
 } from '../services/Schedule_drop.js'
 
-//Add new schedule
+//Add new supply drop
 export const newDrop = asyncHandler(async (req, res) => {
   const ans = await addDrop(req.body)
   //console.log('Controller testing', ans)
@@ -20,7 +20,7 @@ export const newDrop = asyncHandler(async (req, res) => {
   })
 })
 
-//Get new schedule
+//Get new supply drop
 export const getDrop = asyncHandler(async (req, res) => {
   const ans = await getDropByID(req.params.id)
   // res.json(ans)
@@ -32,7 +32,7 @@ export const getDrop = asyncHandler(async (req, res) => {
   })
 })
 
-//Update schedules
+//Update supply drop
 export const updateDrop = asyncHandler(async (req, res) => {
   const ans = await updateDropsByID(req.params.id, req.body)
   // res.send(ans)
@@ -44,7 +44,7 @@ export const updateDrop = asyncHandler(async (req, res) => {
   })
 })
 
-//Delete schedules
+//Delete supply drop
 export const deleteDrop = asyncHandler(async (req, res) => {
   const ans = await deleteDropsByID(req.params.id)
   // res.send(ans)

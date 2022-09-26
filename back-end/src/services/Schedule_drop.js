@@ -5,7 +5,7 @@ import {
   deleteDrops,
 } from '../repository/Schedule_drop.js'
 
-//Add schedules
+//Add supply drop
 export const addDrop = async ({
   pay_id,
   warehouse_id,
@@ -33,18 +33,18 @@ export const addDrop = async ({
   return x.msg
 }
 
-//Get Schedules
+//Get Supply drop
 export const getDropByID = async (id) => {
   return await getDrops(id)
 }
 
-//Update schedules
+//Update Supply drop
 export const updateDropsByID = async (id, ob) => {
   const y = await updateDrops(id, ob)
   return y
 }
 
-//Delete schedules
+//Delete Supply drop
 export const deleteDropsByID = async (id) => {
   return await deleteDrops(id)
 }

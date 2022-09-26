@@ -17,7 +17,6 @@ const supplyDropSchema = mongoose.Schema(
     },
     supply_drop_item: {
       type: {
-        //Check Schedules.js repo and service files to code
         item_id: {
           type: Number,
         },

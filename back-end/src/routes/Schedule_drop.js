@@ -14,9 +14,13 @@ router.post(
   '/drop',
   celebrate({ [Segments.BODY]: createScheduleDropsSchema }),
   newDrop
-) //create schedules
-router.get('/:id', getDrop) //get schedules
-router.put('/:id', updateDrop) //update schedules
-router.delete('/:id', deleteDrop) //delete schedules
+) //create supply drops
+router.get('/:id', getDrop) //get supply drops
+router.put(
+  '/:id',
+  celebrate({ [Segments.BODY]: createScheduleDropsSchema }),
+  updateDrop
+) //update supply drops
+router.delete('/:id', deleteDrop) //delete supply drops
 
 export default router
