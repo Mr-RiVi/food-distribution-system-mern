@@ -46,7 +46,7 @@ const IndexRoutes = () => {
         <Route path="/delivery" element={<CraeteDelivery />} />
 
         <Route path="/supplierList" element={<SupplierList />} />
-        <Route path="/supHome" element={<SupplierList />} />
+        {/* <Route path="/" element={<SupplierList />} /> */}
         <Route path="/inspecReqList" element={<InspecReqList />} />
         <Route path="/supplierDetails/:id" element={<SupplierDetails />} />
         <Route path="/supplierDetails" element={<SupplierDetails />} />
